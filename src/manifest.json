@@ -1,15 +1,15 @@
 {
-  "name": "Replace tabs favicon",
-  "version": "1.0",
-  "manifest_version": 2,
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "all_frames": true,
-      "js": ["content-script.js"],
-      "run_at": "document_end"
-    }
-  ]
+  "name": "Replace tab favicons",
+  "description": "Intercept and block favicons",
+  "background": {
+    "page": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "version": "0.0.1",
+  "manifest_version": 2
 }
